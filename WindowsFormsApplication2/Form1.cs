@@ -28,8 +28,6 @@ namespace WindowsFormsApplication2
 
             try
             {
-                int test = 32;
-
                 client.Open();
 
                 int dateCurrentMonth = DateTime.Today.Month;
