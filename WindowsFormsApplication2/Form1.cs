@@ -28,7 +28,7 @@ namespace WindowsFormsApplication2
 
             try
             {
-                int test = 32;
+                int test = 32;/
 
                 client.Open();
 
