@@ -32,8 +32,13 @@ namespace WindowsFormsApplication2
 
                 int dateCurrentMonth = DateTime.Today.Month;
                 int dateCurrentYear = DateTime.Today.Year;
-                 
+
                 var respons = client.getMonthlyAverageExchangeRates(dateCurrentYear, dateCurrentMonth, LanguageType.sv);
+
+                //Måste kolla hur man ska initera Desc, nam osv  så att det blir nice, detta fungerar annars bra :)
+                var hej2 = client.getLatestInterestAndExchangeRates(LanguageType.sv,
+                    new string[3] {"USADesc", "SEKUSDPMI", "USANamn"});
+
                 client.Close();
 
                 string getExchangeCountryName = respons.groups[0].series[14].seriesname;
